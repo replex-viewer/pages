@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>Singularity Viewer</title>
+    <title>Replex Viewer</title>
     <script type="text/javascript">
 //<![CDATA[
 /*
- * Source: https://github.com/singularity-viewer/login-page
+ * Source: https://github.com/replex-viewer/login-page
  *
  * Paramaters
  * CURRENT VERSION GOES HERE
@@ -145,8 +145,8 @@ window.onload = function()
       toolbarShown = true;
       setVisible("updateavail", true);
     }
-    // User is on Singularity Alpha older than minimum recommended
-    else if (urlParams["channel"] == "Singularity Alpha" && compareVersion(min_alpha, urlParams["version"]) > 0)
+    // User is on Replex Alpha older than minimum recommended
+    else if (urlParams["channel"] == "Replex Alpha" && compareVersion(min_alpha, urlParams["version"]) > 0)
     {
       toolbarShown = true;
       setVisible("alpha_updateavail", true);
@@ -220,17 +220,17 @@ window.onload = function()
     <div id="singtoolbar">
         <div id="closetoolbar"><img src="x.png"/></div>
         <div id="toolbarcontent" style="margin: 0px 4px 10px 12px;">
-            <div id="uptodate" style="display: none;">Your Singularity is up to date.</div>
+            <div id="uptodate" style="display: none;">Your Replex is up to date.</div>
             <div id="updateavail" style="display: none;">
                 <img src="alert.png" style="vertical-align: bottom;" />
-                An updated version of Singularity is available. Please visit the
-                <a href="http://www.singularityviewer.org/" target="_external">Singularity main site</a>
+                An updated version of Replex is available. Please visit the
+                <a href="http://www.replex.org/" target="_external">Replex main site</a>
                 to download it.
             </div>
             <div id="alpha_updateavail" style="display: none;">
                 <img src="alert.png" style="vertical-align: bottom;" />
-                An updated version of Singularity Alpha is available. Please visit the
-                <a href="http://alpha.singularityviewer.org/alpha/" target="_external">Singularity Alpha builds page</a>
+                An updated version of Replex Alpha is available. Please visit the
+                <a href="http://www.replex.org/alpha/" target="_external">Replex Alpha builds page</a>
                 to download it.
             </div>
         </div>
