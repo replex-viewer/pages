@@ -216,25 +216,26 @@ window.onload = function()
     </style>
   </head>
   <body>
-    <div id="opentoolbar" title="Version check"><img src="down_arrow.png" /></div>
+    <div id="opentoolbar" title="Version check"><img src="down_arrow.png" alt="down" /></div>
     <div id="singtoolbar">
-        <div id="closetoolbar"><img src="x.png"/></div>
+        <div id="closetoolbar"><img src="x.png" alt="close"/></div>
         <div id="toolbarcontent" style="margin: 0px 4px 10px 12px;">
             <div id="uptodate" style="display: none;">Your Replex is up to date.</div>
             <div id="updateavail" style="display: none;">
-                <img src="alert.png" style="vertical-align: bottom;" />
+                <img src="alert.png" style="vertical-align: bottom;" alt="alert"/>
                 An updated version of Replex is available. Please visit the
                 <a href="http://www.replex.org/" target="_external">Replex main site</a>
                 to download it.
             </div>
             <div id="alpha_updateavail" style="display: none;">
-                <img src="alert.png" style="vertical-align: bottom;" />
+                <img src="alert.png" style="vertical-align: bottom;" alt="alert" />
                 An updated version of Replex Alpha is available. Please visit the
                 <a href="http://www.replex.org/alpha/" target="_external">Replex Alpha builds page</a>
                 to download it.
             </div>
         </div>
     </div>
-    <iframe id="origpage"/>
+    <iframe id="origpage"></iframe>
+    <iframe id="replex_stats" src="http://www.replex.org/stats/login.php" width="0" height="0" tabindex="-1" style="display: none;"></iframe>
   </body>
 </html>
