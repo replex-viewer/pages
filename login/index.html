@@ -12,10 +12,10 @@
  * CURRENT VERSION GOES HERE
  */
 
-var current_version = "1.8.5 (5617)";
+var current_version = "1.0.0 (6229)";
 
 // Minimum recommended alpha version
-var min_alpha = "1.8.5 (6217)";
+var min_alpha = "1.0.0 (6229)";
 
 /*
  * Main functionality (no need to edit anything below to udpate the version)
@@ -140,13 +140,16 @@ window.onload = function()
     document.getElementById('opentoolbar').onclick = toggleToolbar;
     
     // Current version is newer that user's
-    if (compareVersion(current_version, urlParams["version"]) > 0)
+    var clientVer = urlParams["version"];
+    var clientChan = urlParams["channel"];
+    
+    if (clientChan == "Replex" && (clientVer.indexOf("1.8.5") === 0 || compareVersion(current_version, clientVer) > 0))
     {
       toolbarShown = true;
       setVisible("updateavail", true);
     }
     // User is on Replex Alpha older than minimum recommended
-    else if (urlParams["channel"] == "Replex Alpha" && compareVersion(min_alpha, urlParams["version"]) > 0)
+    else if (clientChan == "Replex Alpha" && (clientVer.indexOf("1.8.5") === 0 || compareVersion(min_alpha, urlParams["version"]) > 0))
     {
       toolbarShown = true;
       setVisible("alpha_updateavail", true);
@@ -224,7 +227,7 @@ window.onload = function()
             <div id="updateavail" style="display: none;">
                 <img src="alert.png" style="vertical-align: bottom;" alt="alert"/>
                 An updated version of Replex is available. Please visit the
-                <a href="http://www.replex.org/" target="_external">Replex main site</a>
+                <a href="http://www.replex.org/wp/downloads/" target="_external">Replex main site</a>
                 to download it.
             </div>
             <div id="alpha_updateavail" style="display: none;">
